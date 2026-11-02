@@ -3,16 +3,18 @@ import java.util.Random;
 public class Dice2 {
 
    private Random randGen;
-   private BarChart6 bars;
+   private BarChart12 bars;
 
    public Dice2 ( ) {
       randGen = new Random ( );
-      bars = new BarChart6();
+      bars = new BarChart12();
    }
 
    public int nextRoll( ) {
       // You supply this code.
-return -1; 
+      return randGen.nextInt(6)+1 + randGen.nextInt(6)+1;
+
+ 
    }
 	
    public void tester (int howMany) {
@@ -22,7 +24,7 @@ return -1;
 	     bars.add(nextRoll ( ));
 	     k = k + 1;
 	     bars.updateUI();    // tells the bar chart to update its picture
-	     sleep(5);
+	     sleep(1);
 
 	  }
 
